@@ -1,0 +1,37 @@
+{
+  "name": "ergophobe/syntaxhighlighter-liquid-brush",
+  "type": "project",
+  "license": "GPLv2",
+  "description": "Liquid brush for the Wordpress Syntax Highlighter plugin",
+  "homepage": "https://github.com/ergophobe/syntaxhighlighter-liquid-brush",
+  "authors": [
+    {
+      "name": "Tom Lambert",
+      "email": "tom@tomlambert.org",
+      "homepage": "https://ideawrights.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org",
+      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    } 
+  ],
+  "require": {
+    "wpackagist-plugin/syntaxhighlighter": "^3.5"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    }
+  }
+}
